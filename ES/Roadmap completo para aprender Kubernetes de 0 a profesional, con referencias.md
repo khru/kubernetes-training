@@ -121,42 +121,6 @@ flowchart LR
 
 ---
 
-# Accesos directos a los documentos del repositorio
-
-Este roadmap ahora incluye accesos directos a todos los documentos `.md` del repo para que puedas saltar entre teoría, práctica y referencias sin buscar archivos manualmente.
-
-## Índice navegable
-
-|Bloque|Documento|
-|---|---|
-|General|[README](./README.md)|
-|General|[Recursos](./Recursos.md)|
-|Roadmap principal|[Roadmap completo para aprender Kubernetes de 0 a profesional, con referencias](./Roadmap%20completo%20para%20aprender%20Kubernetes%20de%200%20a%20profesional,%20con%20referencias.md)|
-|Base (0)|[0. Fundamentos, DevEx y entorno reproducible](./0.%20Fundamentos,%20DevEx%20y%20entorno%20reproducible.md)|
-|Base (1)|[1. Contenedores, Docker, Podman y Compose](./1.%20Contenedores,%20Docker,%20Podman%20y%20Compose.md)|
-|Base (2)|[2. Por qué aparece Kubernetes](./2.%20Por%20qu%C3%A9%20aparece%20Kubernetes.md)|
-|Base (3)|[3. Primer cluster y kubectl](./3.%20Primer%20cluster%20y%20kubectl.md)|
-|Base (4)|[4. Modelo mental de Kubernetes](./4.%20Modelo%20mental%20de%20Kubernetes.md)|
-|Base (5)|[5. Pods y objetos básicos](./5.%20Pods%20y%20objetos%20b%C3%A1sicos.md)|
-|Base (6)|[6. Workloads](./6.%20Workloads.md)|
-|Base (7)|[7. Networking](./7.%20Networking.md)|
-|Base (8)|[8. Configuración, secretos y almacenamiento](./8.%20Configuraci%C3%B3n,%20secretos%20y%20almacenamiento.md)|
-|Profesionalización (9)|[9. Testing automatizado de Kubernetes](./9.%20Testing%20automatizado%20de%20Kubernetes.md)|
-|Profesionalización (10)|[10. Delivery de aplicaciones](./10.%20Delivery%20de%20aplicaciones.md)|
-|Profesionalización (11)|[11. Seguridad](./11.%20Seguridad.md)|
-|Profesionalización (12)|[12. Operación, observabilidad y fiabilidad con Grafana LGTM](./12.%20Operaci%C3%B3n,%20observabilidad%20y%20fiabilidad%20con%20Grafana%20LGTM.md)|
-|Profesionalización (13)|[13. Patrones cloud native](./13.%20Patrones%20cloud%20native.md)|
-|Especialización (14)|[14. Extensión de Kubernetes](./14.%20Extensi%C3%B3n%20de%20Kubernetes.md)|
-|Especialización (15)|[15. Profesionalización por rol](./15.%20Profesionalizaci%C3%B3n%20por%20rol.md)|
-|Especialización (16)|[16. Proyecto final del roadmap](./16.%20Proyecto%20final%20del%20roadmap.md)|
-
-## Nota de cobertura
-
-- La sección **12. Troubleshooting progresivo** está desarrollada dentro de este documento principal y, por ahora, no existe como archivo separado en el repositorio.
-- Si luego quieres, se puede extraer esa sección a un archivo independiente para mantener la misma estructura modular del resto del roadmap.
-
----
-
 # Sistema de ejemplo usado durante el roadmap
 
 Para que las prácticas, diagramas y ejercicios tengan continuidad, todo el roadmap usa el mismo sistema de ejemplo.
