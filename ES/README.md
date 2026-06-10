@@ -24,7 +24,23 @@ Enlace al README en ingles: [README EN](../EN/README.md)
 - Modulo 14: Extensión de Kubernetes
 - Modulo 15: Profesionalización por rol
 - Modulo 16: Proyecto final del roadmap
-- Modulo 17: GitOps y delivery continuo con Argo CD.md
+- Modulo 17: GitOps y delivery continuo con Argo CD
+- Modulo 18: Deployments sin downtime, progressive delivery y experimentación
+- Modulo 19: Releases, compatibilidad y versionado seguro
+- Modulo 20: Migraciones de datos sin downtime
+- Modulo 21: Feature flags, releases graduales y configuración dinámica
+- Modulo 22: Resiliencia de aplicaciones cloud native
+- Modulo 23: SLOs, error budgets e incident response
+- Modulo 24: Autoscaling, capacidad y eficiencia operativa
+- Modulo 25: Seguridad de la cadena de suministro
+- Modulo 26: Policy as Code y guardrails de plataforma
+- Modulo 27: Multi-tenancy, namespaces y límites de plataforma
+- Modulo 28: Networking avanzado y tráfico en Kubernetes
+- Modulo 29: Service mesh, tráfico L7 y resiliencia de red
+- Modulo 30: Backups, restore y disaster recovery
+- Modulo 31: FinOps, coste operativo y eficiencia en Kubernetes
+- Modulo 32: Platform engineering, golden paths y DevEx
+- Modulo 33: Troubleshooting avanzado y failure labs
 
 ## Indice
 
@@ -45,4 +61,20 @@ Enlace al README en ingles: [README EN](../EN/README.md)
 - [14. Extensión de Kubernetes](<14. Extensión de Kubernetes.md>)
 - [15. Profesionalización por rol](<15. Profesionalización por rol.md>)
 - [16. Proyecto final del roadmap](<16. Proyecto final del roadmap.md>)
-- [17. GitOps y delivery continuo con Argo CD.md](<17. GitOps y delivery continuo con Argo CD.md.md>)
+- [17. GitOps y delivery continuo con Argo CD](<17. GitOps y delivery continuo con Argo CD.md.md>)
+- [18. Deployments sin downtime, progressive delivery y experimentación](<18. Deployments sin downtime, progressive delivery y experimentación.md>)
+- [19. Releases, compatibilidad y versionado seguro](<19. Releases, compatibilidad y versionado seguro.md>)
+- [20. Migraciones de datos sin downtime](<20. Migraciones de datos sin downtime.md>)
+- [21. Feature flags, releases graduales y configuración dinámica](<21. Feature flags, releases graduales y configuración dinámica.md>)
+- [22. Resiliencia de aplicaciones cloud native](<22. Resiliencia de aplicaciones cloud native.md>)
+- [23. SLOs, error budgets e incident response](<23. SLOs, error budgets e incident response.md>)
+- [24. Autoscaling, capacidad y eficiencia operativa](<24. Autoscaling, capacidad y eficiencia operativa.md>)
+- [25. Seguridad de la cadena de suministro](<25. Seguridad de la cadena de suministro.md>)
+- [26. Policy as Code y guardrails de plataforma](<26. Policy as Code y guardrails de plataforma.md>)
+- [27. Multi-tenancy, namespaces y límites de plataforma](<27. Multi-tenancy, namespaces y límites de plataforma.md>)
+- [28. Networking avanzado y tráfico en Kubernetes](<28. Networking avanzado y tráfico en Kubernetes.md>)
+- [29. Service mesh, tráfico L7 y resiliencia de red](<29. Service mesh, tráfico L7 y resiliencia de red.md>)
+- [30. Backups, restore y disaster recovery](<30. Backups, restore y disaster recovery.md>)
+- [31. FinOps, coste operativo y eficiencia en Kubernetes](<31. FinOps, coste operativo y eficiencia en Kubernetes.md>)
+- [32. Platform engineering, golden paths y DevEx](<32. Platform engineering, golden paths y DevEx.md>)
+- [33. Troubleshooting avanzado y failure labs](<33. Troubleshooting avanzado y failure labs.md>)

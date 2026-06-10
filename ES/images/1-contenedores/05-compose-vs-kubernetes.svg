@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="t d">
+  <title id="t">Compose como puente hacia Kubernetes</title>
+  <desc id="d">Comparativa de alcance y capacidades entre Compose y Kubernetes</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0b1220"/><stop offset="100%" stop-color="#111827"/></linearGradient>
+    <style>
+      .h{font:700 28px 'JetBrains Mono',monospace;fill:#f3f4f6}.s{font:400 14px 'JetBrains Mono',monospace;fill:#93c5fd}
+      .c{fill:#111827;stroke:#60a5fa;stroke-width:2;rx:12}.k{fill:#111827;stroke:#34d399;stroke-width:2;rx:12}.n{fill:#111827;stroke:#475569;stroke-width:2;rx:12}
+      .t{font:600 15px 'JetBrains Mono',monospace;fill:#f9fafb}.m{font:400 13px 'JetBrains Mono',monospace;fill:#cbd5e1}
+    </style>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg)"/>
+  <text x="56" y="56" class="h">Compose no es Kubernetes pequeno</text>
+  <text x="56" y="84" class="s">Compose para entorno local; Kubernetes para operacion distribuida declarativa</text>
+
+  <rect x="70" y="130" width="500" height="470" class="c"/>
+  <text x="95" y="168" class="t">Docker Compose</text>
+  <text x="95" y="202" class="m">+ arranque rapido multi-contenedor local</text>
+  <text x="95" y="228" class="m">+ compose.yaml legible para servicios/redes/volumenes</text>
+  <text x="95" y="254" class="m">+ buena DevEx para feedback rapido</text>
+  <text x="95" y="292" class="m">- reconciliacion continua limitada</text>
+  <text x="95" y="318" class="m">- sin scheduling multi-nodo</text>
+  <text x="95" y="344" class="m">- sin RBAC/NetworkPolicy como modelo central</text>
+  <text x="95" y="370" class="m">- rollouts y control operativo limitados</text>
+
+  <rect x="630" y="130" width="500" height="470" class="k"/>
+  <text x="655" y="168" class="t">Kubernetes</text>
+  <text x="655" y="202" class="m">+ estado deseado y reconciliacion</text>
+  <text x="655" y="228" class="m">+ scheduling y operacion multi-nodo</text>
+  <text x="655" y="254" class="m">+ rollouts, rollback y self-healing</text>
+  <text x="655" y="280" class="m">+ RBAC, politicas y control declarativo</text>
+  <text x="655" y="306" class="m">+ observabilidad y operacion multi-equipo</text>
+  <text x="655" y="332" class="m">+ CRI, control plane y ecosistema cloud native</text>
+
+  <rect x="70" y="620" width="1060" height="40" class="n"/>
+  <text x="92" y="646" class="m">Puente didactico: compose.yaml -> manifests, compose logs -> kubectl logs, compose ps -> kubectl get pods</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="t d">
+  <title id="t">Contrato HTTP minimo de checkout-api</title>
+  <desc id="d">Diferencias entre health ready y checkout para smoke tests</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0b1220"/><stop offset="100%" stop-color="#111827"/></linearGradient>
+    <style>
+      .h{font:700 28px 'JetBrains Mono',monospace;fill:#f3f4f6}.s{font:400 14px 'JetBrains Mono',monospace;fill:#93c5fd}
+      .b1{fill:#111827;stroke:#60a5fa;stroke-width:2;rx:12}.b2{fill:#111827;stroke:#34d399;stroke-width:2;rx:12}.b3{fill:#111827;stroke:#f59e0b;stroke-width:2;rx:12}
+      .t{font:600 15px 'JetBrains Mono',monospace;fill:#f9fafb}.m{font:400 13px 'JetBrains Mono',monospace;fill:#cbd5e1}
+    </style>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <text x="56" y="58" class="h">Contrato minimo para validar comportamiento</text>
+  <text x="56" y="86" class="s">No basta con que arranque; debe responder como se espera</text>
+
+  <rect x="70" y="140" width="340" height="220" class="b1"/>
+  <text x="94" y="178" class="t">GET /health</text>
+  <text x="94" y="206" class="m">pregunta: proceso vivo?</text>
+  <text x="94" y="231" class="m">codigo esperado: 200</text>
+  <text x="94" y="256" class="m">status esperado: ok</text>
+  <text x="94" y="281" class="m">sin dependencias externas</text>
+
+  <rect x="430" y="140" width="340" height="220" class="b2"/>
+  <text x="454" y="178" class="t">GET /ready</text>
+  <text x="454" y="206" class="m">pregunta: debe recibir trafico?</text>
+  <text x="454" y="231" class="m">codigo esperado: 200</text>
+  <text x="454" y="256" class="m">status esperado: ready</text>
+  <text x="454" y="281" class="m">prepara readiness probes futuras</text>
+
+  <rect x="790" y="140" width="340" height="220" class="b3"/>
+  <text x="814" y="178" class="t">GET /checkout</text>
+  <text x="814" y="206" class="m">pregunta: flujo funcional minimo?</text>
+  <text x="814" y="231" class="m">codigo esperado: 200</text>
+  <text x="814" y="256" class="m">status esperado: ok</text>
+  <text x="814" y="281" class="m">message: checkout created</text>
+
+  <rect x="70" y="410" width="1060" height="230" class="b1"/>
+  <text x="94" y="450" class="t">Smoke test ejecutable</text>
+  <text x="94" y="482" class="m">curl -fsS /health   -> valida vida del proceso</text>
+  <text x="94" y="508" class="m">curl -fsS /ready    -> valida disponibilidad para trafico</text>
+  <text x="94" y="534" class="m">curl -fsS /checkout -> valida funcionalidad minima</text>
+  <text x="94" y="566" class="m">+ comprobaciones JSON con jq: service y status esperados</text>
+  <text x="94" y="592" class="m">Resultado: expectativa declarada -> verificacion repetible</text>
+</svg>

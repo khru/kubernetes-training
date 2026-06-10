@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="tt dd">
+  <title id="tt">De objetos a respuestas con kubectl jq y yq</title>
+  <desc id="dd">Flujo para inspeccionar JSON y YAML en la seccion 0</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#93c5fd"/>
+    </marker>
+    <style>
+      .h { font: 700 28px 'JetBrains Mono', monospace; fill: #f3f4f6; }
+      .s { font: 400 14px 'JetBrains Mono', monospace; fill: #93c5fd; }
+      .b1 { fill: #111827; stroke: #60a5fa; stroke-width: 2; rx: 12; }
+      .b2 { fill: #111827; stroke: #34d399; stroke-width: 2; rx: 12; }
+      .b3 { fill: #111827; stroke: #f59e0b; stroke-width: 2; rx: 12; }
+      .t { font: 600 15px 'JetBrains Mono', monospace; fill: #f9fafb; }
+      .m { font: 400 13px 'JetBrains Mono', monospace; fill: #cbd5e1; }
+      .l { stroke: #93c5fd; stroke-width: 2.2; marker-end: url(#arr); }
+      .l2 { stroke: #34d399; stroke-width: 2.2; marker-end: url(#arr); }
+    </style>
+  </defs>
+  <rect width="1200" height="620" fill="url(#bg)"/>
+
+  <text x="58" y="60" class="h">Consultar objetos, no solo leer texto</text>
+  <text x="58" y="88" class="s">JSON y YAML como datos estructurados: preguntas concretas con jq y yq</text>
+
+  <rect x="70" y="150" width="300" height="160" class="b1"/>
+  <text x="95" y="185" class="t">kubectl / archivos</text>
+  <text x="95" y="215" class="m">- kubectl get -o json</text>
+  <text x="95" y="238" class="m">- kubectl get -o yaml</text>
+  <text x="95" y="261" class="m">- docs/examples/*.json|yaml</text>
+
+  <rect x="450" y="150" width="300" height="160" class="b2"/>
+  <text x="475" y="185" class="t">Filtro estructurado</text>
+  <text x="475" y="215" class="m">- jq '.items[].metadata.name'</text>
+  <text x="475" y="238" class="m">- yq '.spec.template.spec'</text>
+  <text x="475" y="261" class="m">- select, pipes, transformacion</text>
+
+  <rect x="830" y="150" width="300" height="160" class="b3"/>
+  <text x="855" y="185" class="t">Respuesta operativa</text>
+  <text x="855" y="215" class="m">- pods no Running</text>
+  <text x="855" y="238" class="m">- imagen desplegada</text>
+  <text x="855" y="261" class="m">- puerto y dependencias</text>
+
+  <line x1="370" y1="230" x2="450" y2="230" class="l"/>
+  <line x1="750" y1="230" x2="830" y2="230" class="l2"/>
+
+  <rect x="70" y="360" width="1060" height="210" class="b1"/>
+  <text x="95" y="398" class="t">Aplicacion directa en la seccion 0</text>
+  <text x="95" y="430" class="m">1) Crear checkout-config.yaml y checkout-config.json</text>
+  <text x="95" y="456" class="m">2) Inspeccionar con task yaml:inspect y task json:inspect</text>
+  <text x="95" y="482" class="m">3) Entender que YAML/JSON expresan objetos que luego Kubernetes interpreta</text>
+  <text x="95" y="508" class="m">4) Preparar el salto a kubectl get -o json|yaml + consultas precisas</text>
+</svg>

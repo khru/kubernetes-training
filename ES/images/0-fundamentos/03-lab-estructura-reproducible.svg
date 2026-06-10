@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="ti de">
+  <title id="ti">Estructura del laboratorio reproducible</title>
+  <desc id="de">Arbol principal del repositorio y flujo de tareas</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <style>
+      .h { font: 700 28px 'JetBrains Mono', monospace; fill: #f3f4f6; }
+      .s { font: 400 14px 'JetBrains Mono', monospace; fill: #93c5fd; }
+      .panel { fill: #111827; stroke: #60a5fa; stroke-width: 2; rx: 12; }
+      .panel2 { fill: #111827; stroke: #34d399; stroke-width: 2; rx: 12; }
+      .tree { font: 400 14px 'JetBrains Mono', monospace; fill: #e5e7eb; }
+      .step { font: 600 14px 'JetBrains Mono', monospace; fill: #f9fafb; }
+      .muted { font: 400 13px 'JetBrains Mono', monospace; fill: #cbd5e1; }
+      .line { stroke: #475569; stroke-width: 2; }
+    </style>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+
+  <text x="56" y="62" class="h">kubernetes-learning-lab: base reproducible de la seccion 0</text>
+  <text x="56" y="90" class="s">Versionado, scripts y tareas declarativas para repetir aprendizaje sin friccion</text>
+
+  <rect x="56" y="130" width="700" height="580" class="panel"/>
+  <text x="80" y="165" class="step">Estructura recomendada</text>
+  <text x="80" y="200" class="tree">kubernetes-learning-lab/</text>
+  <text x="110" y="225" class="tree">Taskfile.yml</text>
+  <text x="110" y="248" class="tree">README.md</text>
+  <text x="110" y="271" class="tree">.env.example</text>
+  <text x="110" y="294" class="tree">.gitignore</text>
+  <text x="110" y="327" class="tree">apps/checkout-api/</text>
+  <text x="110" y="360" class="tree">docs/examples/checkout-config.yaml</text>
+  <text x="110" y="383" class="tree">docs/examples/checkout-config.json</text>
+  <text x="110" y="416" class="tree">docs/commands.md</text>
+  <text x="110" y="439" class="tree">docs/troubleshooting.md</text>
+  <text x="110" y="462" class="tree">docs/references.md</text>
+  <text x="110" y="485" class="tree">docs/jq-yq.md</text>
+  <text x="110" y="518" class="tree">scripts/validate-tools.sh</text>
+  <text x="110" y="541" class="tree">scripts/smoke-test.sh</text>
+  <text x="110" y="574" class="tree">tmp/</text>
+
+  <line x1="92" y1="208" x2="92" y2="580" class="line"/>
+
+  <rect x="790" y="130" width="350" height="270" class="panel2"/>
+  <text x="815" y="165" class="step">Flujo minimo con Task</text>
+  <text x="815" y="200" class="muted">1) task doctor</text>
+  <text x="815" y="225" class="muted">2) task yaml:inspect</text>
+  <text x="815" y="250" class="muted">3) task json:inspect</text>
+  <text x="815" y="275" class="muted">4) task smoke (con app levantada)</text>
+  <text x="815" y="315" class="muted">Objetivo: validar herramientas,</text>
+  <text x="815" y="338" class="muted">inspeccionar datos y probar salud</text>
+
+  <rect x="790" y="440" width="350" height="270" class="panel2"/>
+  <text x="815" y="475" class="step">Por que esto importa</text>
+  <text x="815" y="510" class="muted">- Repetibilidad del entorno</text>
+  <text x="815" y="535" class="muted">- Menos errores manuales</text>
+  <text x="815" y="560" class="muted">- Cambios trazables con Git</text>
+  <text x="815" y="585" class="muted">- Base para Docker y Kubernetes</text>
+  <text x="815" y="610" class="muted">- Aprendizaje explicito, no magia</text>
+</svg>

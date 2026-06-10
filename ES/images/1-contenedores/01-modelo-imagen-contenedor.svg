@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="t d">
+  <title id="t">Modelo base: imagen y contenedor</title>
+  <desc id="d">De codigo a imagen y de imagen a proceso en ejecucion</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#93c5fd"/></marker>
+    <style>
+      .h{font:700 28px 'JetBrains Mono',monospace;fill:#f3f4f6}
+      .s{font:400 14px 'JetBrains Mono',monospace;fill:#93c5fd}
+      .b1{fill:#111827;stroke:#60a5fa;stroke-width:2;rx:12}
+      .b2{fill:#111827;stroke:#34d399;stroke-width:2;rx:12}
+      .b3{fill:#111827;stroke:#f59e0b;stroke-width:2;rx:12}
+      .t{font:600 15px 'JetBrains Mono',monospace;fill:#f9fafb}
+      .m{font:400 13px 'JetBrains Mono',monospace;fill:#cbd5e1}
+      .l{stroke:#93c5fd;stroke-width:2.2;marker-end:url(#a)}
+    </style>
+  </defs>
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <text x="60" y="58" class="h">Imagen = paquete | Contenedor = proceso</text>
+  <text x="60" y="86" class="s">Idea central del modulo 1</text>
+
+  <rect x="80" y="150" width="260" height="120" class="b1"/>
+  <text x="105" y="190" class="t">Codigo fuente</text>
+  <text x="105" y="215" class="m">checkout-api</text>
+
+  <rect x="420" y="150" width="320" height="120" class="b2"/>
+  <text x="445" y="190" class="t">Imagen checkout-api:1.0.0</text>
+  <text x="445" y="215" class="m">filesystem + metadata + cmd</text>
+
+  <rect x="820" y="120" width="300" height="90" class="b3"/>
+  <text x="845" y="155" class="t">Contenedor A</text>
+  <text x="845" y="180" class="m">proceso en ejecucion</text>
+
+  <rect x="820" y="230" width="300" height="90" class="b3"/>
+  <text x="845" y="265" class="t">Contenedor B</text>
+  <text x="845" y="290" class="m">misma imagen, otro proceso</text>
+
+  <line x1="340" y1="210" x2="420" y2="210" class="l"/>
+  <line x1="740" y1="185" x2="820" y2="165" class="l"/>
+  <line x1="740" y1="235" x2="820" y2="275" class="l"/>
+
+  <rect x="80" y="340" width="1040" height="220" class="b1"/>
+  <text x="110" y="380" class="t">Lectura operativa</text>
+  <text x="110" y="410" class="m">- build produce imagen; run produce contenedor</text>
+  <text x="110" y="435" class="m">- la imagen se etiqueta, escanea, publica y descarga</text>
+  <text x="110" y="460" class="m">- el contenedor se arranca, para, inspecciona y elimina</text>
+  <text x="110" y="485" class="m">- varios contenedores pueden salir de la misma imagen</text>
+  <text x="110" y="510" class="m">- Kubernetes operara contenedores, no codigo fuente directo</text>
+</svg>

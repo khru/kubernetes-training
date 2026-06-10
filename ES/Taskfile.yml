@@ -1,0 +1,61 @@
+version: "3"
+
+vars:
+  TARGET_FILE: "Roadmap completo para aprender Kubernetes de 0 a profesional, con referencias.md"
+  SOURCE_DIR: "."
+  BOOK_OUTPUT: "build/libro.pdf"
+  BOOK_TITLE: "Kubernetes - Libro Editorial"
+  WORK_DIR: ".book-build"
+
+tasks:
+  prettier:target:
+    desc: Format target markdown with Prettier
+    cmds:
+      - npx --yes prettier --write "{{.TARGET_FILE}}"
+
+  normalize:markdown:
+    desc: Clean markdown lists and remove utm_source=chatgpt.com from URLs
+    cmds:
+      - task: prettier:target
+      - python3 scripts/normalize_enumerations.py "{{.TARGET_FILE}}"
+      - python3 scripts/trim_code_block_trailing_blank_line.py "{{.TARGET_FILE}}"
+      - python3 scripts/remove_utm_chatgpt.py "{{.TARGET_FILE}}"
+
+  build:book-pdf:
+    desc: Build book PDF from numbered markdowns in selected folder
+    cmds:
+      - python3 scripts/build_book_pdf.py --source-dir "{{.SOURCE_DIR}}" --output "{{.BOOK_OUTPUT}}" --title "{{.BOOK_TITLE}}" --work-dir "{{.WORK_DIR}}"
+
+  generate:readmes:
+    desc: Generate root and language READMEs with module navigation
+    cmds:
+      - python3 scripts/generate_course_readmes_and_navigation.py
+
+  prompt:diagram:augment:
+    desc: Print reusable prompt to read a file and augment it with diagrams
+    cmds:
+      - |
+        FILE_PATH="{{.TARGET_FILE}}" python3 - <<'PY'
+        import os
+        file_path = os.environ.get("FILE_PATH", "")
+        prompt = f'''Lee el fichero "{file_path}".
+
+        Objetivo:
+        - No borrar ni modificar el contenido existente del documento.
+        - Leerlo completo, comprenderlo y detectar los puntos donde un diagrama aporta claridad real.
+        - Generar diagramas que ayuden a entender el contenido (flujo, arquitectura, checklist, proceso, mapa conceptual, etc.).
+        - Insertar esos diagramas dentro del propio documento en las secciones donde tenga sentido pedagógico.
+
+        Reglas:
+        - Mantener intacto todo el texto original; solo se permite añadir contenido (diagramas e imágenes referenciadas).
+        - Usar la skill de diagramas disponible en skills/diagramming.
+        - Guardar los diagramas en una carpeta de imágenes coherente con el nombre del documento.
+        - Referenciar las imágenes en Markdown justo después del bloque o explicación que refuerzan.
+        - Evitar diagramas decorativos: cada diagrama debe explicar algo concreto del documento.
+
+        Entrega esperada:
+        - Documento actualizado con las imágenes añadidas donde corresponde.
+        - Lista breve de diagramas creados y ruta de cada archivo.
+        '''
+        print(prompt)
+        PY
